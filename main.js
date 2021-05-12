@@ -37,7 +37,7 @@ const logMethod = (req, res, next) => {
 app.use('/users', logMethod)
 
 
-//Pulse 4
+//4)
 app.use(express.json())
 
 //5)
@@ -50,6 +50,17 @@ app.use((err, req, res, next) => {
             }
         })
 })
+
+
+//practis 1)
+app.get("/users", (req, res, next) => {
+  res.json(users);
+  next();
+});
+
+
+
+
 
 app.get("/users", (req, res, next) => {
   res.json(users);
