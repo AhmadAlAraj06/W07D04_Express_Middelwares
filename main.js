@@ -58,7 +58,13 @@ app.get("/users", (req, res, next) => {
   next();
 });
 
+//practis 2)
+app.use((req, res, next) => {
 
+  console.log(req.body.name)
+  next()
+
+})
 
 
 
